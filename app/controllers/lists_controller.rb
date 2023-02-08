@@ -1,6 +1,7 @@
 class ListsController < ApplicationController
-  before_action :set_list, only: %i[ show edit update destroy ]
     before_action :authenticate_user!
+  before_action :set_list, only: %i[ show edit update destroy ]
+
   # GET /lists or /lists.json
   def index
     @lists = List.all
